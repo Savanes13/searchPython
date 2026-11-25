@@ -1,0 +1,19 @@
+[project]
+name = "searcher"
+version = "0.1.0"
+description = "API для поиска товаров в каталоге"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.20.0",
+    "fastapi[standard]",
+    "psycopg[binary]>=3.3.6",
+    "sqlalchemy>=2.1.4",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
