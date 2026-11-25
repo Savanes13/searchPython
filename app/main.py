@@ -1,13 +1,10 @@
 from fastapi import FastAPI
+from app.routers import products
 
 app = FastAPI()
+app.include_router(products.router)
 
 
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
-
-@app.get("/product/{product_id}")
-async def getProduct(product_id):
-    return {'item': product_id}
-
