@@ -3,7 +3,7 @@ from fastapi import APIRouter
 # это описанеи маршрута и tags для свагера
 router = APIRouter(
     prefix="/product",
-    tags=["products"],
+    tags=["product"],
 )
 
 # сам эндпоинт
